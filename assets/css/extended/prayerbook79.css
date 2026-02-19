@@ -84,7 +84,7 @@ header .logo a {
   font-family: 'Sabon', Georgia, serif;
   font-size: clamp(36px, 5.2vw + 16px, 50px);
   font-weight: 400;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.033em;
   text-transform: none;
 }
 

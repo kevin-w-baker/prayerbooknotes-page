@@ -18,8 +18,8 @@ theme = "PaperMod"
   hideSummary = false
 
   [params.homeInfoParams]
-    Title = "MarginaliaTest"
-    Content = "Notes from praying the Daily Office Test"
+    Title = "The words of my mouth and the meditations of my heart..."
+    Content = "Notes from praying the Daily Office"
 
   [params.assets]
     disableFingerprinting = false

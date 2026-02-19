@@ -1,0 +1,298 @@
+/* ==========================================================================
+   PrayerBook79 — Typography inspired by the 1979 Book of Common Prayer
+   (The Episcopal Church)
+   ========================================================================== */
+
+/* === FONT FACE DECLARATIONS === */
+
+@font-face {
+  font-family: 'Sabon';
+  src: url('/fonts/Sabon.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sabon';
+  src: url('/fonts/SabonBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sabon';
+  src: url('/fonts/SabonItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sabon';
+  src: url('/fonts/SabonBoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* === PAPERMOD THEME VARIABLE OVERRIDES === */
+
+:root {
+  --theme: #ffffff;
+  --entry: #ffffff;
+  --primary: #1a1a1a;
+  --secondary: #4a4a4a;
+  --tertiary: #e8e4de;
+  --content: #1a1a1a;
+  --border: #d4d0c8;
+  --gap: 28px;
+  --radius: 0;
+  --main-width: 680px;
+}
+
+/* Suppress dark mode entirely */
+.dark {
+  --theme: #ffffff;
+  --entry: #ffffff;
+  --primary: #1a1a1a;
+  --secondary: #4a4a4a;
+  --tertiary: #e8e4de;
+  --content: #1a1a1a;
+  --border: #d4d0c8;
+}
+
+/* === GLOBAL TYPOGRAPHY === */
+
+body {
+  font-family: 'Sabon', 'Georgia', 'Times New Roman', serif;
+  font-size: clamp(16px, 1.1vw + 14px, 19px);
+  line-height: clamp(1.6, 1.5 + 0.2vw, 1.7);
+  color: #1a1a1a;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === SITE HEADER / LOGO ===
+   BCP title page: very large roman, tight kerning, uppercase */
+
+.nav .logo,
+header .logo,
+header .logo a {
+  font-family: 'Sabon', Georgia, serif;
+  font-size: clamp(20px, 2vw + 14px, 26px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* === POST TITLE ===
+   BCP section titles: large roman (not bold), tight kerning */
+
+.post-title,
+.post-title a {
+  font-family: 'Sabon', Georgia, serif;
+  font-size: clamp(28px, 4vw + 12px, 38px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* === HEADINGS WITHIN POST CONTENT ===
+   BCP hierarchy:
+   - H1: large roman, tight kerning (rare — section title style)
+   - H2: bold, moderate size (content headings like "Confession of Sin")
+   - H3: bold, smaller (numbered sections like "1. Principal Feasts")
+*/
+
+.post-content h1 {
+  font-family: 'Sabon', Georgia, serif;
+  font-size: clamp(26px, 3.5vw + 10px, 34px);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin-top: 2.5em;
+  margin-bottom: 0.8em;
+}
+
+.post-content h2 {
+  font-family: 'Sabon', Georgia, serif;
+  font-size: clamp(22px, 2.5vw + 10px, 28px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin-top: 2.2em;
+  margin-bottom: 0.6em;
+}
+
+.post-content h3 {
+  font-family: 'Sabon', Georgia, serif;
+  font-size: clamp(18px, 1.5vw + 10px, 20px);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+.post-content h4 {
+  font-family: 'Sabon', Georgia, serif;
+  font-size: clamp(16px, 1.1vw + 14px, 19px);
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+}
+
+/* === BODY TEXT === */
+
+.post-content p {
+  margin-bottom: 1.2em;
+  text-align: left;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* === BLOCKQUOTES ===
+   Styled as BCP rubrics: italic, subtle, no heavy border */
+
+.post-content blockquote {
+  font-style: italic;
+  border-left: 2px solid #d4d0c8;
+  margin-left: 0;
+  padding-left: 1.5em;
+  color: #333333;
+}
+
+.post-content blockquote p {
+  font-style: italic;
+}
+
+/* === LINKS ===
+   Warm gray underline evoking aged paper */
+
+.post-content a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-decoration-color: #8b7d6b;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.post-content a:hover {
+  text-decoration-color: #1a1a1a;
+}
+
+/* === HORIZONTAL RULES ===
+   Thin, centered, partial-width — understated as in the BCP */
+
+.post-content hr {
+  border: none;
+  border-top: 1px solid #d4d0c8;
+  margin: 2.5em auto;
+  width: 40%;
+}
+
+/* === POST METADATA ===
+   Small, quiet, spaced — like BCP running footers */
+
+.post-meta {
+  font-family: 'Sabon', Georgia, serif;
+  font-size: clamp(13px, 0.8vw + 10px, 15px);
+  letter-spacing: 0.02em;
+  color: #666666;
+}
+
+/* === POST LIST / INDEX ===
+   Entry titles: roman, moderate size */
+
+.post-entry .entry-header h2 {
+  font-family: 'Sabon', Georgia, serif;
+  font-size: clamp(20px, 2vw + 12px, 24px);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.post-entry .entry-content,
+.post-entry .entry-footer {
+  font-family: 'Sabon', Georgia, serif;
+}
+
+/* === HOME INFO ===
+   Site title and subtitle on the home page */
+
+.first-entry .entry-header h1,
+.home-info .entry-hint-about {
+  font-family: 'Sabon', Georgia, serif;
+}
+
+.home-info h1 {
+  font-size: clamp(28px, 4vw + 12px, 38px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* === NAVIGATION MENU === */
+
+#menu a {
+  font-family: 'Sabon', Georgia, serif;
+  font-size: clamp(14px, 0.9vw + 11px, 16px);
+  letter-spacing: 0.02em;
+}
+
+/* === FOOTER ===
+   BCP running footer style: small, italic context */
+
+.footer {
+  font-family: 'Sabon', Georgia, serif;
+  font-size: clamp(12px, 0.7vw + 10px, 14px);
+  color: #888888;
+}
+
+/* === TAG / CATEGORY PAGES === */
+
+.terms-tags a,
+.post-tags a {
+  font-family: 'Sabon', Georgia, serif;
+}
+
+/* === LISTS WITHIN CONTENT === */
+
+.post-content ul,
+.post-content ol {
+  margin-bottom: 1.2em;
+}
+
+.post-content li {
+  margin-bottom: 0.4em;
+}
+
+/* === CODE / PREFORMATTED (minimal — this is a prayer blog) === */
+
+.post-content code {
+  font-size: 0.9em;
+}
+
+/* === RESPONSIVE PADDING ===
+   Ensure content never hits screen edges on mobile */
+
+.main {
+  padding-left: clamp(16px, 4vw, 40px);
+  padding-right: clamp(16px, 4vw, 40px);
+}
+
+/* === PRINT STYLES ===
+   Honor the BCP's print heritage */
+
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+
+  .post-title {
+    font-size: 24pt;
+    letter-spacing: -0.02em;
+  }
+}

@@ -1,0 +1,58 @@
+baseURL = "https://dailyoffice.prayerbooknotes.page/"
+languageCode = "en-us"
+title = "Marginalia"
+theme = "PaperMod"
+
+[params]
+  description = "Notes from praying the Daily Office"
+  author = "Kevin Baker"
+  defaultTheme = "light"
+  disableThemeToggle = true
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = false
+  ShowToc = false
+  comments = false
+  hideSummary = false
+
+  [params.homeInfoParams]
+    Title = "Marginalia"
+    Content = "Notes from praying the Daily Office"
+
+  [params.assets]
+    disableFingerprinting = false
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "categories"
+  name = "Categories"
+  url = "/categories/"
+  weight = 30
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS"]

@@ -94,10 +94,10 @@ header .logo a {
 .post-title,
 .post-title a {
   font-family: 'Sabon', Georgia, serif;
-  font-size: clamp(19px, 2.7vw + 8px, 25px);
+  font-size: clamp(22px, 3.2vw + 10px, 30px);
   font-weight: 400;
-  letter-spacing: -0.015em;
-  line-height: 1.25;
+  letter-spacing: -0.018em;
+  line-height: 1.2;
 }
 
 /* === HEADINGS WITHIN POST CONTENT ===

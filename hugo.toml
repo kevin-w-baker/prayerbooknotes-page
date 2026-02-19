@@ -18,8 +18,8 @@ theme = "PaperMod"
   hideSummary = false
 
   [params.homeInfoParams]
-    Title = "Marginalia"
-    Content = "Notes from praying the Daily Office"
+    Title = "MarginaliaTest"
+    Content = "Notes from praying the Daily Office Test"
 
   [params.assets]
     disableFingerprinting = false

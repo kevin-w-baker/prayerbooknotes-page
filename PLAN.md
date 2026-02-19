@@ -196,3 +196,5 @@ hugo.toml                             # Site configuration
 4. Check About page renders and is linked from nav
 5. Commit and push — confirm GitHub Actions build succeeds
 6. After DNS propagation, verify `https://dailyoffice.prayerbooknotes.page/` serves the site
+
+hugo new content posts/my-post.md.

@@ -1,7 +1,7 @@
 ---
 title: "A First Entry"
-date: 2026-02-19
-draft: false
+date: 2026-02-19T08:00:00-06:00
+draft: true
 tags: ["daily-office", "morning-prayer"]
 categories: ["reflections"]
 ---

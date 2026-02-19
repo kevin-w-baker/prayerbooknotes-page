@@ -76,16 +76,16 @@ body {
 }
 
 /* === SITE HEADER / LOGO ===
-   BCP title page: very large roman, tight kerning, uppercase */
+   BCP title page style: large roman, tight kerning */
 
 .nav .logo,
 header .logo,
 header .logo a {
   font-family: 'Sabon', Georgia, serif;
-  font-size: clamp(20px, 2vw + 14px, 26px);
+  font-size: clamp(28px, 4vw + 12px, 38px);
   font-weight: 400;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  text-transform: none;
 }
 
 /* === POST TITLE ===
